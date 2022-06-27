@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="app">
+        <div class="profile">
+          <div class="profile__info">
+            <img src="./images/image-jeremy.png" alt="" class="profile__img" />
+            <div class="profile__name-container">
+              <p class="profile__report-for">Report for</p>
+              <p class="profile__name">Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="profile__stats">
+            <p class="profile__daily">Daily</p>
+            <p class="profile__weekly">Weekly</p>
+            <p class="profile__monthly">Monthly</p>
+          </div>
+        </div>
+        <div class="cards"></div>
+        <template>
+          <div class="card">
+            <div class="card__info">
+              <div class="card__title-container">
+                <p class="card__title"></p>
+                <div class="card__dots"></div>
+              </div>
+              <div class="card__time-container">
+                <p class="card__time"></p>
+                <p class="card__last-week">
+                  Last Week - <span class="last-week-time"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

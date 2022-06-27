@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+img {
+  display: block;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: var(--very-dark-blue);
+}
+.app {
+  margin: 2rem 0;
+  width: 90%;
+}
+.cards {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.profile {
+  margin-bottom: 2rem;
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  color: gainsboro;
+}
+.profile > * {
+  padding: 2rem;
+}
+.profile__daily {
+  color: gainsboro;
+}
+.profile__info {
+  display: flex;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 1rem;
+}
+.profile__name-container {
+  margin-left: 2rem;
+}
+.profile__report-for {
+  font-size: 1rem;
+}
+.profile__name {
+  font-size: 2rem;
+}
+.profile__img {
+  width: 5rem;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+}
+.profile__stats {
+  color: var(--pale-blue);
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  background-position-x: 95%;
+  background-position-y: -10%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+.card__info {
+  color: gainsboro;
+  padding: 2rem;
+  background-color: var(--dark-blue);
+  margin-top: 4rem;
+  border-radius: 0.9rem;
+}
+.card__dots {
+  background-image: url(./images/icon-ellipsis.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 1rem;
+}
+.card__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__time {
+  font-size: 3rem;
+}
+.card__last-week {
+  font-size: 1.5rem;
+  color: var(--pale-blue);
+}
+/*768px*/
+@media screen and (min-width: 48em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*1024px*/
+@media screen and (min-width: 64em) {
+  .app {
+    display: flex;
+    justify-content: center;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-right: 2rem;
+  }
+  .profile__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile__name-container {
+    margin: 0;
+    margin-top: 2rem;
+  }
+  .profile__stats {
+    flex-direction: column;
+    flex: 1;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    width: 20rem;
+  }
+  .card__info > * {
+    margin: 0.5rem 0;
+  }
+  .card__time-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card__time-container > * {
+    margin: 1rem 0;
+  }
+  .card__time {
+    font-size: 4rem;
+  }
+  .profile__info {
+    height: 65%;
+    max-width: 20rem;
+  }
+  .profile__name {
+    font-size: 4rem;
+  }
+}
+/*1440px*/
+@media screen and (min-width: 90em) {
+  html {
+    font-size: 75%;
+  }
+  .profile__name-container {
+    flex: 1;
+  }
+}
+
+/*Hover States*/
+.card__info:hover {
+  cursor: pointer;
+  background-color: hsl(235, 46%, 30%);
+}
+.profile__stats > *:hover {
+  cursor: pointer;
+  color: gainsboro !important;
+}
